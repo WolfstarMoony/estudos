@@ -3,67 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Tags HTML</title>
+    <title>Exemplo de Tags de Tabela HTML</title>
 </head>
 <body>
-<!-- Exemplo de Tag de Imagem -->
-<section>
-    <h2>Tag de Imagem</h2>
-    <img src="exemplo.jpg" alt="Descrição da Imagem" width="300" height="200">
-    <p>A tag <strong>&lt;img&gt;</strong> é usada para inserir imagens. O atributo <strong>src</strong> define o caminho da imagem e <strong>alt</strong> fornece uma descrição alternativa.</p>
-</section>
 
-<!-- Exemplo de Tags de Áudio e Vídeo -->
 <section>
-    <h2>Tags de Áudio e Vídeo</h2>
+    <h2>Tags de Tabela</h2>
     
-    <!-- Exemplo de Áudio -->
-    <audio controls>
-        <source src="exemplo.mp3" type="audio/mpeg">
-        Seu navegador não suporta a tag <strong>&lt;audio&gt;</strong>.
-    </audio>
-    <p>A tag <strong>&lt;audio&gt;</strong> é usada para incluir áudio em uma página. O atributo <strong>controls</strong> adiciona controles de reprodução.</p>
-    
-    <!-- Exemplo de Vídeo -->
-    <video width="320" height="240" controls>
-        <source src="exemplo.mp4" type="video/mp4">
-        <track src="legendas_en.vtt" kind="subtitles" srclang="en" label="English">
-        Seu navegador não suporta a tag <strong>&lt;video&gt;</strong>.
-    </video>
-    <p>A tag <strong>&lt;video&gt;</strong> é usada para incluir vídeos. O atributo <strong>controls</strong> adiciona controles de reprodução, e <strong>track</strong> é usado para legendas e outros textos.</p>
-</section>
+    <table>
+        <caption>Tabela de Exemplo</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Ocupação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>30</td>
+                <td>Desenvolvedor</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>25</td>
+                <td>Designer</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>40</td>
+                <td>Gerente</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total de Registros: 3</td>
+            </tr>
+        </tfoot>
+    </table>
 
-<!-- Exemplo de Mapa e Área -->
-<section>
-    <h2>Tag de Mapa e Área</h2>
-    <img src="mapa.jpg" usemap="#mapa" alt="Mapa com áreas clicáveis">
-    <map name="mapa">
-        <area shape="rect" coords="34,44,270,350" href="http://exemplo.com" alt="Área Clicável">
-    </map>
-    <p>A tag <strong>&lt;map&gt;</strong> define um mapa de imagem. A tag <strong>&lt;area&gt;</strong> define áreas clicáveis dentro do mapa.</p>
-</section>
-
-<!-- Exemplo de Canvas -->
-<section>
-    <h2>Tag de Canvas</h2>
-    <canvas id="meuCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
-    <p>A tag <strong>&lt;canvas&gt;</strong> é usada para desenhar gráficos e animações em JavaScript. O elemento <strong>canvas</strong> deve ser manipulado com JavaScript para adicionar conteúdo.</p>
-    <script>
-        var canvas = document.getElementById('meuCanvas');
-        var ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#FF0000';
-        ctx.fillRect(10, 10, 150, 75);
-    </script>
-</section>
-
-<!-- Exemplo de Figure -->
-<section>
-    <h2>Tag de Figure</h2>
-    <figure>
-        <img src="exemplo-figure.jpg" alt="Descrição da Imagem">
-        <figcaption>Legenda da Imagem</figcaption>
-    </figure>
-    <p>A tag <strong>&lt;figure&gt;</strong> é usada para agrupar uma imagem e sua legenda. A tag <strong>&lt;figcaption&gt;</strong> fornece uma legenda para o conteúdo da tag <strong>&lt;figure&gt;</strong>.</p>
+    <p>A tag <strong>&lt;table&gt;</strong> define uma tabela. As tags <strong>&lt;tr&gt;</strong> definem linhas da tabela, enquanto <strong>&lt;td&gt;</strong> define células de dados e <strong>&lt;th&gt;</strong> define células de cabeçalho. A tag <strong>&lt;thead&gt;</strong> agrupa o cabeçalho, <strong>&lt;tbody&gt;</strong> agrupa o corpo da tabela, e <strong>&lt;tfoot&gt;</strong> agrupa o rodapé. A tag <strong>&lt;caption&gt;</strong> fornece uma legenda para a tabela, e <strong>&lt;col&gt;</strong> pode ser usado para definir propriedades de colunas.</p>
 </section>
 
 </body>
