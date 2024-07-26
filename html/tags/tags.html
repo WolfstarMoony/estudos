@@ -6,75 +6,64 @@
     <title>Exemplo de Tags HTML</title>
 </head>
 <body>
-<article> <!-- Artigo principal -->
-    <header> <!-- Cabeçalho do artigo -->
-        <h1>Título Principal (H1)</h1>
-        <h2>Subtítulo (H2)</h2>
-        <h3>Seção (H3)</h3>
-        <h4>Subseção (H4)</h4>
-        <h5>Detalhe (H5)</h5>
-        <h6>Informação Adicional (H6)</h6>
-    </header>
-
-    <p>Essa tag define um parágrafo. <br> Usamos a tag <strong>br</strong> para pular uma linha. 
-        <strong>Essa tag é usada para definir texto com forte importância, como esse texto em negrito.</strong> 
-        <em>Essa tag é usada para texto enfatizado, como este exemplo.</em>
-    </p>
-
-    <p>Podemos usar a tag <a href="#">a</a> para criar um hiperlink.</p>
-    
-    <hr> <!-- Linha horizontal -->
-    <p>A tag <strong>hr</strong> adiciona uma linha horizontal como esta acima, que pode ser usada para separar seções de conteúdo.</p>
-    
-    <footer> <!-- Rodapé do artigo -->
-        <p>Este é o rodapé do artigo.</p>
-    </footer>
-</article>
-
-<!-- Exemplos de Tags de Lista -->
+<!-- Exemplo de Tag de Imagem -->
 <section>
-    <h2>Tags de Lista</h2>
-    <ul>
-        <li>Essa tag <strong>&lt;ul&gt;</strong> é usada para criar uma lista não ordenada.</li>
-        <li>Essa tag <strong>&lt;ol&gt;</strong> serve para criar uma lista ordenada.</li>
-        <li>Essa tag <strong>&lt;li&gt;</strong> serve para adicionar um item na lista.</li>
-        <li>Essa tag <strong>&lt;dl&gt;</strong> define uma lista de descrição.</li>
-        <li>Essa tag <strong>&lt;dt&gt;</strong> define um termo/nome em uma lista de descrição.</li>
-        <li>Essa tag <strong>&lt;dd&gt;</strong> é usada para descrever um termo/nome em uma lista de descrições.</li>
-    </ul>
-    <p>Note que a tag <strong>&lt;menu&gt;</strong> foi removida, pois não é uma tag padrão HTML5 para listas.</p>
+    <h2>Tag de Imagem</h2>
+    <img src="exemplo.jpg" alt="Descrição da Imagem" width="300" height="200">
+    <p>A tag <strong>&lt;img&gt;</strong> é usada para inserir imagens. O atributo <strong>src</strong> define o caminho da imagem e <strong>alt</strong> fornece uma descrição alternativa.</p>
 </section>
 
-<!-- Exemplos de Tags de Formulário -->
+<!-- Exemplo de Tags de Áudio e Vídeo -->
 <section>
-    <h2>Tags de Formulário</h2>
-    <form action="#" method="post">
-        <fieldset>
-            <legend>Informações Pessoais</legend>
-            
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <br><br>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" cols="50"></textarea>
-            <br><br>
-            
-            <label for="opcao">Escolha uma opção:</label>
-            <select id="opcao" name="opcao">
-                <option value="opcao1">Opção 1</option>
-                <option value="opcao2">Opção 2</option>
-                <option value="opcao3">Opção 3</option>
-            </select>
-            <br><br>
-            
-            <button type="submit">Enviar</button>
-        </fieldset>
-    </form>
+    <h2>Tags de Áudio e Vídeo</h2>
+    
+    <!-- Exemplo de Áudio -->
+    <audio controls>
+        <source src="exemplo.mp3" type="audio/mpeg">
+        Seu navegador não suporta a tag <strong>&lt;audio&gt;</strong>.
+    </audio>
+    <p>A tag <strong>&lt;audio&gt;</strong> é usada para incluir áudio em uma página. O atributo <strong>controls</strong> adiciona controles de reprodução.</p>
+    
+    <!-- Exemplo de Vídeo -->
+    <video width="320" height="240" controls>
+        <source src="exemplo.mp4" type="video/mp4">
+        <track src="legendas_en.vtt" kind="subtitles" srclang="en" label="English">
+        Seu navegador não suporta a tag <strong>&lt;video&gt;</strong>.
+    </video>
+    <p>A tag <strong>&lt;video&gt;</strong> é usada para incluir vídeos. O atributo <strong>controls</strong> adiciona controles de reprodução, e <strong>track</strong> é usado para legendas e outros textos.</p>
+</section>
+
+<!-- Exemplo de Mapa e Área -->
+<section>
+    <h2>Tag de Mapa e Área</h2>
+    <img src="mapa.jpg" usemap="#mapa" alt="Mapa com áreas clicáveis">
+    <map name="mapa">
+        <area shape="rect" coords="34,44,270,350" href="http://exemplo.com" alt="Área Clicável">
+    </map>
+    <p>A tag <strong>&lt;map&gt;</strong> define um mapa de imagem. A tag <strong>&lt;area&gt;</strong> define áreas clicáveis dentro do mapa.</p>
+</section>
+
+<!-- Exemplo de Canvas -->
+<section>
+    <h2>Tag de Canvas</h2>
+    <canvas id="meuCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <p>A tag <strong>&lt;canvas&gt;</strong> é usada para desenhar gráficos e animações em JavaScript. O elemento <strong>canvas</strong> deve ser manipulado com JavaScript para adicionar conteúdo.</p>
+    <script>
+        var canvas = document.getElementById('meuCanvas');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#FF0000';
+        ctx.fillRect(10, 10, 150, 75);
+    </script>
+</section>
+
+<!-- Exemplo de Figure -->
+<section>
+    <h2>Tag de Figure</h2>
+    <figure>
+        <img src="exemplo-figure.jpg" alt="Descrição da Imagem">
+        <figcaption>Legenda da Imagem</figcaption>
+    </figure>
+    <p>A tag <strong>&lt;figure&gt;</strong> é usada para agrupar uma imagem e sua legenda. A tag <strong>&lt;figcaption&gt;</strong> fornece uma legenda para o conteúdo da tag <strong>&lt;figure&gt;</strong>.</p>
 </section>
 
 </body>
